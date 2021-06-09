@@ -15,13 +15,14 @@ function App() {
   }, []);
 
   console.log(users);
-  
-  return (
-    <div className="App">
-      <h1>Hello!</h1>
-      <p>Start editing to see some magic happen! :)</p>
-    </div>
-  );
+
+  return users.map( ({ name, email }) => {
+    return (
+      <div>
+        NAME: { name }, EMAIL:  { email }
+      </div>
+    )
+  })
 }
 
 export default App;
